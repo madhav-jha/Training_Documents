@@ -1,0 +1,25 @@
+#########################
+Day 33 : 4th Sep. 2025
+#########################
+
+	AWS Solution Architect Associate Level!
+	
+	Introduction to Cloud :::
+
+		What is Cloud Computing?
+		
+		IAM Services
+		
+		EC2 Services 
+		
+		
+		
+		https://docs.aws.amazon.com/cli/latest/userguide/cli_code_examples.html
+		
+Next :
+
+	IAM Service Demo
+	EC2 Service!
+	
+	
+	https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html
