@@ -23,3 +23,43 @@ Next :
 	
 	
 	https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html
+
+
+
+#########################
+Day 34 : 5th Sep. 2025
+#########################		
+	
+	- IAM Services :
+	
+		- Create User 
+		
+		- Create User  Group 
+		
+		- Policies 
+		
+		- Roles 
+		
+		
+	- Security Credentials 
+	
+		Create IAM User :
+		
+			- AWS Console 
+			
+			- AWS Cli 
+			
+			- AWS SDK
+			
+	- Associate / 
+	
+	
+	- RBAC ::::
+	
+		Manager 		=> DevOps / Develop / Security / Storage / Networking 
+		
+		Lead 
+		
+		Associate 
+
+
