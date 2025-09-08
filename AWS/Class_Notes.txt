@@ -63,3 +63,44 @@ Day 34 : 5th Sep. 2025
 		Associate 
 
 
+		
+
+#######################
+Day 35 : 8th Sep. 2025
+#######################
+
+	EC2 Services!	
+	
+		AMI :	AMI contains the operating system, application server, and applications for your instance.
+		
+		Create an AMI and Copy to any target Region.
+		
+		
+		VM - Jenkins_Server 
+		
+			OS -> Ubuntu 
+			
+		Server Templates ::::		
+		
+		Docker :::
+		
+			Containers				VM  
+			
+			Images 					AMI 
+		
+		
+	EBS Volumes ::::
+	
+		- Elastic Block Store !
+		
+		
+	EFS Volumes ::::
+	
+	S3 ::::
+	
+	
+	
+	AWS CodeCommit ==> Distributed VCS in AWS.
+	
+	
+	Use S3 Buckt to host static web appln. 
