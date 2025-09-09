@@ -104,3 +104,56 @@ Day 35 : 8th Sep. 2025
 	
 	
 	Use S3 Buckt to host static web appln. 
+
+
+	
+	
+#######################
+Day 36 : 9th Sep. 2025
+#######################
+
+	S3 
+	
+	Volumes 
+	
+	Dbase Services 
+	
+	Networking :
+	
+		VMs - dedicated VPC
+		
+		
+	EC2 Instance -> AMI 
+	
+		-> Kubernetes / Jenkins / Ansible - AC / Target Nodes -> Provision
+		
+		-> Configure Kube_WN1 ->		
+		
+	UserData :
+	
+	#!/bin/bash
+	yum update -y
+	yum install -y httpd
+	systemctl start httpd
+	systemctl enable httpd
+	echo "<h1>Hello! You accessing web server - $(hostname -f)</h1>" > /var/www/html/index.html
+	
+	
+	192.168.0.0/16	==> Home 
+	
+	172.0.0.0/16	==> AWS Default VPC 
+	
+	10.0.0.0/16		==> For any Big Network
+	
+	Networking :
+	
+		VMs - dedicated VPC
+		Subnet :
+			- Public Subnet & Private Subnet
+			
+			EC2 Instance using IAM Role and S3
+			
+		Route Table 
+		Route Table Asso.
+		Internet Gateway
+		
