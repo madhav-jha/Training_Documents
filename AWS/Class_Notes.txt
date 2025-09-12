@@ -157,3 +157,69 @@ Day 36 : 9th Sep. 2025
 		Route Table Asso.
 		Internet Gateway
 		
+
+#######################
+Day 37 : 11th Sep. 2025
+#######################
+
+https://docs.aws.amazon.com/
+
+	Networking :
+	
+		Amazon VPC
+		
+		Subnet :
+			- Public Subnet & Private Subnet
+						
+		Route Table 
+		Route Table Asso.
+		Internet Gateway
+		
+		
+		
+#######################
+Day 38 : 12th Sep. 2025
+#######################
+
+	Working with AWS VPC ::::
+	
+		AWS Infra-Structure  :
+		
+			- Create an AWS Infra Architecture Diagram
+		
+		
+		
+	VPC Connectivity Methods :::
+	
+		
+	
+	Public Subnet ::::
+	
+		VPC - PL1-VPC-A
+		
+				- PL1-VPC-A-IGW
+				
+				- PL1-VPC-A-Public			
+				
+				- PL1-VPC-A-Public-RT				
+				
+				- PL1-VPC-A-SG1
+		
+		
+	Private Subnet ::::
+	
+		VPC - PL1-VPC-A
+		
+				- PL1-VPC-A-Private 
+				
+				- PL1-VPC-A-Private-RT
+				
+				- PL1-VPC-A-SG2
+				
+				
+				
+	Dedicated Network for : Kube_Cluster / Test Server  /  DBase Servers 	
+		
+Next ::
+	
+	VPC Connectivity Methods :::
