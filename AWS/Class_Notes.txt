@@ -223,3 +223,29 @@ Day 38 : 12th Sep. 2025
 Next ::
 	
 	VPC Connectivity Methods :::
+
+
+	
+	
+#######################
+Day 39 : 15th Sep. 2025
+#######################	
+
+
+	VPC Connectivity Methods :::
+
+		VPC Endpoints & PrivateLink
+		VPC Peering connection
+		Transit Gateway
+		Site-2-Site VPN
+		Client VPN
+		Direct Connect
+		
+		HTTPS vs HTTP
+		SSL/TLS
+		7 Layers of Network 
+
+Next :::
+
+	Load Balancer 
+	
