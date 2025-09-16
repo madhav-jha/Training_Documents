@@ -249,3 +249,36 @@ Next :::
 
 	Load Balancer 
 	
+	
+#######################
+Day 40 : 16th Sep. 2025
+#######################		
+
+	High Availability & Scalability :
+	
+	
+	Load Balancer & Auto-Scaling Group!
+	
+	High Availability ::::
+	
+	
+	ALB Routing :::
+	
+	
+	
+		Host based routing 									www.google.com 
+															www.mail.google.com 
+															www.maps.google.com
+															
+		
+		path based routing 									www.mail.google.com/inbox
+															www.mail.google.com/sent 
+															
+															
+		
+		Query/Parameters based routing						www.mail.google.com/inbox/from:aws?
+	
+	
+	Working with Load Balancer!
+	
+		- Create a Load Balancer and Route Traffic to EC2 Instances thru Load Balancer.
