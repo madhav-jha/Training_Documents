@@ -282,3 +282,66 @@ Day 40 : 16th Sep. 2025
 	Working with Load Balancer!
 	
 		- Create a Load Balancer and Route Traffic to EC2 Instances thru Load Balancer.
+
+
+		
+	
+#######################
+Day 41 : 18th Sep. 2025
+#######################	
+
+
+	- Cloud Front & Global Accelerator!
+	
+		- Content Delivery Network. 
+			- Improve the User Experience!
+			
+			
+	- Cloud Watch :::
+	
+		- Monitor Service Architecture :::
+		
+		
+		Retrieval Component 
+		
+		Time Series Database ?
+		
+		
+		CPU/Memory
+		
+		
+		Monitoring - Continuous Monitoring!
+		
+			Production Support !
+			
+			Production Monitoring !
+		
+			Kubernetes Monitoring ::::
+			
+				Helm :::
+				
+				
+#######################
+Day 42 :22nd Sep. 2025
+#######################	
+
+
+Lambda Service :::
+
+	Serverless :::
+	
+		Users no need to manage any infra.
+			
+
+		SQS
+
+
+		SNS 
+
+
+
+Next :::
+
+	Conti with Route53
+
+	Security
