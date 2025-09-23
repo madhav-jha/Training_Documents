@@ -345,3 +345,61 @@ Next :::
 	Conti with Route53
 
 	Security
+
+
+		
+#######################
+Day 43 :23rd Sep. 2025
+#######################				
+			
+
+	Route53 
+	
+	Security
+
+	
+	AWS Security & Encryptions ::::
+	
+		EC2 - SG 
+		
+		Subnet - NACL 
+		
+		Secured Key Pairs 
+		
+		SQS --> Encryption --> During Rest, On-Transit
+		
+		Security Certificates 
+		
+		AWS Key Vault : Credential Manager 
+		
+		Jenkins Credential Manager - 
+		
+
+	Cloudformation :::
+	
+		Infra-Structure Provisioning - IAC tool
+			
+			Terraform - AWS/Azure
+				- Kubernetes
+				- Github 				
+		
+			AWS CLI config
+			
+				Script - CDK
+				
+					Python -> boto3 Libraries 	
+	
+		https://docs.aws.amazon.com/cli/latest/userguide/cli_iam_code_examples.html
+		
+		
+		aws configure 
+		
+			aws.tf :
+			
+				vpc,subnet,route_table,Route Table Asso, IGW, Sec Grp, EC2 
+				
+		CF Template : 
+		
+				s3 bucket!
+		
+				vpc,subnet,route_table,Route Table Asso, IGW, Sec Grp, EC2 
