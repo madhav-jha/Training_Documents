@@ -403,3 +403,78 @@ Day 43 :23rd Sep. 2025
 				s3 bucket!
 		
 				vpc,subnet,route_table,Route Table Asso, IGW, Sec Grp, EC2 
+
+
+				
+#######################
+Day 44 :25th Sep. 2025
+#######################	
+
+	- Open-Source DevOps 
+
+	- AWS DevOps Services :::
+	
+		- AWS CodeCommit		==> GitHub/Gitlab/BitBucket / S3 Buckets
+
+		- AWS CodeBuild/CodeDeploy/CodePipelines	==> Jenkins 
+		
+			- Build Pipelines 			==> CodeBuild			==>		CI
+			
+			- Release Pipelines 		==> CodeDeploy			==>		CD - Prod Release 
+			
+			- CodePipelines				==> CodeBuild + CodeDeploy	==> CICD Workflow 
+			
+			
+		- AWS 		--> Infra-Structure/Platform as Service 
+		
+		- Azure 	-->	Infra-Structure/Platform/Software as Service 
+					-->	Azure DevOps Services!
+					
+					
+	- Open-Source DevOps 
+	
+	- Azure DevOps Services
+		- Azure Boards 
+		- Azure Pipelines
+			- Build Pipelines
+			- Release Pipelines
+		- Azure Repositories 
+		- Azure Artifacts 
+		- Azure Test 
+		
+	- GitHub == used for Open-Source Projects
+		Jenkins
+		
+	- Github Actions => jenkins/AzPipelines/Gitlab-ci 
+	
+	- Docker/Kubernetes
+	
+	
+
+	Az Admin - az-104(az sys admin asso.)25hrs. certification  
+	
+	=>  az-400(Az DevOps)
+	
+	
+	AWS - create Infra-Structure to deploy 2-tier application
+		
+		- implementation
+		
+		- interview 
+	
+	https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.Migrating.html
+	
+	https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-db2-for-luw-to-amazon-ec2-by-using-log-shipping-to-reduce-outage-time.html
+	
+	
+	1. vpc  
+	2. ASG / load balancer?
+	3. webservice 		user-request1,2 - 
+	4. mysql - az1, az2 = read relication?
+	
+	
+Next :::
+
+	- Azure Cloud - Certification Modules - az-104 
+	
+	
