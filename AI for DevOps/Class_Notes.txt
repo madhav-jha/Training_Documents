@@ -1,0 +1,81 @@
+AI for DevOps :::
+
+Introduction to AI for DevOps :
+
+DevOps/AWS/Azure :::
+
+-> DevOps!
+
+-> -> Process to automate CICD.
+
+   -> Open-Source DevOps Tools 
+		-> git,jenkins,docker,kubernetes		
+		-> Ansible,Terraform
+		
+   -> AWS/Azure/GCP Cloud Services ==> Essentials
+   
+   -> AI for DevOps - Multi-Cloud Platform	--> Add Value to Profile.
+   
+   -> Use cases,Real Time Scenarios 
+   -> FAQs 
+   -> Real Time Scenarios based FAQs
+
+
+AI for DevOps :::
+
+DevOps/AI :
+
+Docker,Kubernetes,Prometheus,Grafana
+
+No 
+
+No Proper response from AI!
+
+Drawback!
+
+Opportunity!
+
+	- AI Model 	-> Backend Data 
+	
+	- AI Prompts -> Prompt Engineers!
+	
+	- AI Models  -> 
+	
+	- Core of AI Solutions -> 
+	
+	- Roles & Responsibilities ->
+	
+	- Continuous Learning :	
+	
+	- DevOps/Cloud Resources => 
+	
+	- Developers/Testing/Monitoring ==> AI 
+	
+	-> DevOps Journey!
+	
+		--> DevOps,DevSecOps,MLOps,AIOps,GitOps,SRE,
+			-----------------------------------------> AI Driven Solutions
+			
+			-> Peak Time! AI 
+			
+	-> Ask to AI ....	
+	
+Introduction to AI for DevOps ::::
+
+	- Gen-AI
+
+	- AI for DevOps :::
+	
+	- DevOps/Cloud AWS :::
+	
+	
+	- Data ?
+	
+	-> Gen-AI ????
+	
+	-> Face Detection Algorithm! 
+	
+	-> cicd ->
+	
+		Java/.Net/Python/
+
