@@ -79,3 +79,143 @@ Introduction to AI for DevOps ::::
 	
 		Java/.Net/Python/
 
+
+
+
+#########################
+Day 3 : 14th Oct. 2025
+#########################
+
+
+	Create Application Source Code
+	
+	
+	Automate Testing!
+	
+	
+	Containerized Application Service
+	
+	Jenkinsfile!
+	
+	
+	Application Deployment :
+	
+		- Docker 
+			
+			Dockerfile ?
+		
+		- Kubernetes 
+		
+		
+	Production Deployments :
+	
+		- Ensure High Availability 
+		
+	Kubernetes Architecture ::::
+	
+		Kubernetes_Master 
+			Kubernetes_WorkerNodes!
+	
+	
+	Kubernetes Architecture Components ???
+	
+		- ETCD 						- KM
+		
+		- APIServer 				- KM
+		
+		- Scheduler 				- KM 
+		
+		- Kubelet 					- KM,WN
+		
+		- CRI - Container-D			- KM,WN
+		
+		- Controller Manager		- KM
+		
+		- KubeProxy 				- KM,WN
+		
+		
+		
+	APIServer :
+	
+	PODs
+	
+	5 replicas of pod
+	
+	
+	Controller Manager :
+	
+		Deployment Controller Object
+		
+		
+		Auto-Scaling ::::
+		
+			Kubectl scale command ?
+		
+		kubectl scale deployment nginx-deploy --replicas=10
+		
+		
+		
+		Microservice ==> 20 replicas of pods - 100 users
+		
+						 40+					200 users requests
+						 
+						 
+						 CPU Utilization/Memory/Network Traffic			==> AI 
+						 
+						 Threshold Limit ==> 80%
+						 
+						 min & max limit of pods 
+						 
+						 
+		kubectl autoscale deployment nginx-deploy --min=2 --max=10 --cpu=70%
+		
+		
+		
+		Monitoring of Infra-Structure :::
+		
+			Prometheus & Grafana.			
+				- CPU 
+				- Memory
+				- Network
+			
+		Can you Monitor Kubernetes Cluster ????
+		
+		Steps to Monitor Kubernetes Cluster!
+		
+		
+		apt 
+		
+		yum 
+		
+		
+		apt install nginx	
+		
+		
+		Helm Package Manager!				***********
+		
+			Helm is Package Manager for Kubernetes
+			
+			Using Helm we can install/Manage any Package Deployment in Kubernetes.
+			
+			
+			Install Helm 
+			
+			& Using Helm, Install Prometheus/Grafana
+			
+
+Next :
+			
+	K8sGPT --> Proactively Monitor & Manage the Kubernetes Clusters
+			
+			
+Use AI for below :	
+
+	1. Developers Perspective
+	
+	2. DevOps - Application CICD Perspective
+	
+	3. Application/Infra-Structure Monitoring Perspective
+	
+	4. Infra-Structure Provisioning/Configuration Perspective	
+
+				- Using Terraform
