@@ -116,13 +116,7 @@ Day 26 : 22nd August 2025
 
 
 
-
-
-
-
-
-
-				
+		
 			- Ansible Adhoc Commands :
 			
 				- It is used to execute a module in the target machine.
