@@ -219,3 +219,241 @@ Use AI for below :
 	4. Infra-Structure Provisioning/Configuration Perspective	
 
 				- Using Terraform
+
+
+
+		
+		
+				
+#########################
+Day 4 : 14th Oct. 2025
+#########################		
+
+	
+	Docker & Kubernetes 		===> Based on Production Level Implementation using Kubeadm!
+
+	Kubernetes :::
+	
+		-> Minikube 		=> Single Node Kubernetes 	==> This is not meant for Production Level. 
+		
+		-> Kubeadm			=> Multi-Node Kubernetes Architecture ==> This is meant for Production Level. 
+		
+	
+	Kubernetes ::::
+	
+		-> Kubernetes is an Open-Source Container Orchestration Tool.
+		-> Kubernetes is used to Deploy Containerized Micro-Service based Applications to ensure high availability.
+		-> Kubernetes create the replicas of pods(Is a smallest/Atomic Unit of Task) using Replicasets.
+		-> Kubernetes supports Auto-Scaling & Load Balancing 
+		-> Kubernetes Support Self-Healing		
+	
+	
+	Managed Services from the Service Providers :::
+	
+		AWS 	:	ECS,ECR,EKS 
+		Azure 	:	ACS,ACR,AKS
+		GCP		:	GCE,GCR,GKE
+		
+		
+	
+	Containerization :
+	
+		-> Is a process of packaging the Application along with its dependencies.
+		-> Docker Container Engine is used to Containerize the Applications
+		
+	
+	Any Web/Mobile Application		==> are developed using Micro-Service Service Based Application Architecture.
+	
+	Netflix/Facebook/Amazon/
+	
+	
+	on DevOps Perspective :
+	
+		-> Monolith Application 
+				- Tightly coupled Applications - 
+		
+		-> Micro-Service based Application 
+				- Loosely Coupled Application Architecture - 
+	
+	
+		Web App :
+		
+		www.amazon.com		==> Web Application
+		
+		Functions ::::
+		
+		
+		Sign-Up 		==> Micro-Service1	-> 3-tier ==> Developer1 -> Code Change,Test,Release the changes to prod 
+		Sign-In 		==> Micro-Service2	-> 3-tier ==> 
+		Search 			==> Micro-Service3
+		Add to Cart 
+		Place Order 
+		Make Payment
+		Confirm Order 
+		Track
+		
+		
+	Docker,Kubernetes,Terraform,Jenkins ==> 
+	
+	git,Ansible,Monitoring Tools ==>
+	
+	
+	Working with Kubernetes :::
+	
+		- Setup the Kubernetes Architecture using kubeadm.
+		
+		- Kubernetes_Master
+			- Kubernetes_WorkerNode1
+			- Kubernetes_WorkerNode2
+			- Kubernetes_WorkerNode3
+			
+			
+	Kubernetes Concepts & Terminologies :
+	
+		- Pod 
+			-> Is a smallest/Atomic Unit of Task/schedule
+			-> Pod Deployment 
+				-> Single Container Pod 
+				
+				-> Multi-Container Pod 
+			
+		- Kubernetes Cluster 
+			-> It is a collection of Kubernetes WorkerNodes 
+				- The Application Pods are actually deployed in the WorkerNodes.
+			
+			-> Minimum 3 WorkerNodes
+
+			- Kubernetes_Master
+				- Kubernetes_WorkerNode1
+				- Kubernetes_WorkerNode2
+				- Kubernetes_WorkerNode3
+
+			
+			- Kubernetes_Master(VM)			
+				Kubernetes_Cluster1 									AWS - Mumbai Region
+					- Kubernetes_WorkerNode1(VM)
+					- Kubernetes_WorkerNode2(VM)
+					- Kubernetes_WorkerNode3(VM)			
+				Kubernetes_Cluster2 									AWS - Tokyo Region
+					- Kubernetes_WorkerNode1(VM)
+					- Kubernetes_WorkerNode2(VM)
+					- Kubernetes_WorkerNode3(VM)			
+				Kubernetes_Cluster3 									AWS - Singapore Region
+					- Kubernetes_WorkerNode1(VM)
+					- Kubernetes_WorkerNode2(VM)
+					- Kubernetes_WorkerNode3(VM)		
+		
+			- Kubernetes_Master(VM)											On-Prem	
+				- Kubernetes_Master1(VM)									AWS		
+					Kubernetes_Cluster1 									AWS - Mumbai Region
+						- Kubernetes_WorkerNode1(VM)
+						- Kubernetes_WorkerNode2(VM)
+						- Kubernetes_WorkerNode3(VM)			
+					Kubernetes_Cluster2 									AWS - Tokyo Region
+						- Kubernetes_WorkerNode1(VM)
+						- Kubernetes_WorkerNode2(VM)
+						- Kubernetes_WorkerNode3(VM)			
+					Kubernetes_Cluster3 									AWS - Singapore Region
+						- Kubernetes_WorkerNode1(VM)
+						- Kubernetes_WorkerNode2(VM)
+						- Kubernetes_WorkerNode3(VM)		
+			
+				- Kubernetes_Master2(VM)									Azure 			
+					Kubernetes_Cluster1 									Azure - Mumbai Region
+						- Kubernetes_WorkerNode1(VM)
+						- Kubernetes_WorkerNode2(VM)
+						- Kubernetes_WorkerNode3(VM)			
+					Kubernetes_Cluster2 									Azure - Tokyo Region
+						- Kubernetes_WorkerNode1(VM)
+						- Kubernetes_WorkerNode2(VM)
+						- Kubernetes_WorkerNode3(VM)			
+					Kubernetes_Cluster3 									Azure - Singapore Region
+						- Kubernetes_WorkerNode1(VM)
+						- Kubernetes_WorkerNode2(VM)
+						- Kubernetes_WorkerNode3(VM)		
+		
+		
+		
+		- Kubectl 
+
+			- Is an Command Line Utility to interact with Kubernetes Master 
+		
+		- Kubelet 
+			- Is an Agent to deploy the pods 
+		
+		- Kubeadm 
+			- Is an Command Line Utility used to configure the Kubernetes Architecture Components
+		
+		Controller Object :::
+			ReplicaSet 
+			Deployment 
+
+
+		ReplicaSet :::
+		
+			--> Replicaset is used to execute the specific no. of pods in the cluster.
+			--> Replicaset uses the Set Based Operator
+			--> Used to replicate the pods and able to scale up/down
+			--> The Replicasets will be automatically created, while creating Deployment Controller Object.
+		
+		Deployment Controller Object :::
+		
+			--> It is used to deploy the pods and ensure high availability of pods by creating pod replicas 
+			--> 1. Create Muliple instance/replicas/copies of pods 
+				2. Used to Scale-Up / Scale-Down the Pods 
+				3. Used to Upgrade the application pods 
+				4. Used to Down-grade/roll-back the application pods
+			--> The upgrade/down-grade of application pods can be done without any downtime. 
+			--> To achieve zero-downtime during upgrade/down-grade, By Default, it used Rolling-Update Deployment Strategy.
+				
+				CICD --> Continuous Integration/Continuous Deployment 
+				
+		myweapp_v1.0_Snapshot.war						myweapp_Img:v1.0	
+		
+		myweapp_v1.1_Snapshot.war						myweapp_Img:v1.1			# Minor Release 
+		
+		myweapp_v2.0_Snapshot.war						myweapp_Img:v2.0			# Major Release 
+
+		Deployed using 3 replicas of pods 		-- using  Rolling-Update Deployment Strategy.
+		
+		
+		Pod1	==> myweapp_Img:v1.0		=============>			myweapp_Img:v1.1
+		
+		Pod2 	==>	myweapp_Img:v1.0		=============>			myweapp_Img:v1.1
+		
+		Pod3 	==> myweapp_Img:v1.0		=============>			myweapp_Img:v1.1
+			
+		
+		- Services 
+			
+			- NodePort				==> 	30000 - 32767		--> Open this range of ports 
+				---> 	To expose the pods to internet we use NodePort Service
+				
+			- ClusterIP
+				--->	To Maintain the Pods Network Within the Cluster.
+				
+			- LoadBalancers
+			
+			
+			
+			3-Tier Application Architecture :
+			
+			
+				Front-End 			- User Interface 	- Pod1.1,1.2,1.3
+				
+				Application Layer 	- Business Logic	- Pod2.1,2.2,2.3 
+				
+				Back-End Layer 		- DataBase			- Pod3.1,3.2,3.3
+			
+			
+		- Volumes 
+		
+			- Hostpath 
+			- Persistant Volume 
+			- Persistant Volume Claim
+		
+
+
+Next :::	
+
+		Demo on Kubernetes using KubeAdm.
