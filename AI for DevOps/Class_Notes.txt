@@ -530,4 +530,30 @@ Day 5 : 17th Oct. 2025
 		--> ReplicaSet
 		--> Pod Instances 
 	
+
+
+#########################
+Day 6 : 21st Oct. 2025
+#########################	
+
+
+	AIOps & MLOps ::: 
+	
+	
+		- DevOps Perspective :
 		
+	AI -- 
+	
+	ML --
+		
+		
+	
+	
+	K8sGPT to Monitor Kubernetes - Based On AIOps 
+	
+	
+	IAC - To Provision the Resources - Using AI Tools with Terraform
+		
+		
+		
+
