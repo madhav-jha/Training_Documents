@@ -557,3 +557,142 @@ Day 6 : 21st Oct. 2025
 		
 		
 
+
+#########################
+Day 7 : 23rd Oct. 2025
+#########################
+
+	Prometheus/Grafana -> Monitoring
+
+	K8sGPT -> Used to Analyze Kubernetes Cluster.
+
+	Kubernetes Dashboard -> Manage the Kubernetes Objects using GUI Mode.	
+
+	Kubectl --> 	
+	
+	EKS/AKS/GKE --> GUI Based solutions
+	
+	
+	Helm ==> Is Kubernetes Package Manager 
+
+
+
+User Authentication :::
+
+	- 	Password Based Authentication
+	-	Key Based Authentication
+	-	Token Based Authentication
+	- 	Passwordless Authentication
+
+
+Kubernetes - uses Token Based Authentication.
+
+Create Service Account :
+
+	
+	- Authentication	-> Who can Access ?		Service Account Id
+	
+	- Authorization 	-> What Level of Access?
+	
+		--> RBAC : Role Based Access Control 
+		
+				Developer 
+				Admin 
+				Manager 
+				Guest
+				
+		--> Kubernetes Cluster Level Access 
+		
+				- Service Account is Create at the Cluster Level Access.
+				
+					clusterrolebinding
+		
+		--> Kubernetes Namespace Level Access 
+					
+					rolebinding
+
+		- Kubernetes Cluster 
+			-> It is a collection of Kubernetes WorkerNodes 
+				- The Application Pods are actually deployed in the WorkerNodes.
+				
+	Non-Prod : 										Prod :  24/7
+		                                            
+	Kubernetes_Master                               Kubernetes_Master
+		Kubernetes_WorkerNode1                      	Kubernetes_WorkerNode1
+		Kubernetes_WorkerNode2                      	Kubernetes_WorkerNode2
+		Kubernetes_WorkerNode3												
+        Kubernetes_WorkerNode4
+		Kubernetes_WorkerNode5
+        Kubernetes_WorkerNode6
+		Kubernetes_WorkerNode7
+
+
+	Namespace : Is a logical partitioning of Kubernetes Cluster
+				Namespace can be created based the Environments/Teams
+				
+	
+				
+	
+	
+	K8sGPT -> Used to Analyze Kubernetes Cluster :::::::
+		
+		https://k8sgpt.ai/docs
+		
+		
+		https://openai.com/
+		
+		
+		
+Kubernetes Services :
+	NodePort 
+	ClusterIP
+	LoadBalancer
+	
+	Ingress Controller Object:::
+		- To reduce the LoadBalancer
+		
+		- Ingress Rulesets:::
+		
+			-> Simple Routing 			# Static Web Page like Blogsite/Web Articles
+			
+			-> Host Based Routing
+			
+			-> Path Based Routing 
+			
+			-> Query Based Routing 
+		
+		
+	www.google.com ---> URL -> LoadBalancer URL (Application Level)
+	
+		-> gmail 
+		
+			www.google.gmail.com 			==> Host Based Routing	
+		
+		-> drive 
+		
+			www.google.drive.com			==> Host Based Routing	
+		
+		-> Maps 
+		
+			www.google.maps.com				==> Host Based Routing	
+			
+		-> translate 
+		
+		
+	
+	www.google.gmail.com
+	
+		inbox 			->	www.google.gmail.com/inbox					=> Path Based Routing
+		sent			->	www.google.gmail.com/sent					=> Path Based Routing
+		trash
+		spam
+	
+	
+	www.google.gmail.com/inbox	
+	
+		Search Mail : @xxx.com
+	
+					www.google.gmail.com/inbox?@xxx.com					=> Query Based Routing 
+					www.google.gmail.com/sent?@xxx.com					=> Query Based Routing 
+	
+	
