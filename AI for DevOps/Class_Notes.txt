@@ -695,4 +695,68 @@ Kubernetes Services :
 					www.google.gmail.com/inbox?@xxx.com					=> Query Based Routing 
 					www.google.gmail.com/sent?@xxx.com					=> Query Based Routing 
 	
+
 	
+#########################
+Day 8 : 23rd Oct. 2025
+#########################	
+
+	
+	Infra-Structure Provisioning/Configuration Perspective	
+				- Using Terraform
+				
+	-->
+	
+		Infra-Structure Provisioning :
+		
+		IAC - Infra-Structure As Code 
+		
+		AWS Cloud --> Cloudformation Service 
+		
+		Azure --> Azure Resource Manager - ARM 
+		
+		
+		Multi-Cloud / Hybrid Environments :::::
+		
+			IAC --> Terraform
+			
+					Terraform Registries ---> 
+					
+		Terraform :::
+		
+			==> AWS Cloud Platform :::
+			
+			==> HCL Scripts 
+			
+		1. Virtual Design the Architecture
+		
+		2. Using Terraform Registry - Create the Terraform IAC.
+			https://registry.terraform.io/browse/providers
+		
+		3. VS Code to Write the Terraform Scripts
+		
+		
+	Terraform Workflow :
+	
+		1. Identify the Scope of Infra-Structure - AWS/Azure/GCP
+		
+		2. Write Terraform Scripts 
+		
+		3. Perform Terraform Init --> Initialize Terraform Provider 
+		
+		4. Perform Terraform Plan --> Preview/Validate the Resource Configuration
+		
+		5. Perform Terraform Apply --> Implement the Actual Changes in the Real Infra-Structure
+		
+		
+	AI - Copilot :
+	
+		- To Create Terraform Project.
+		
+		- GenAI --> Generate Terraform Scripts & Architecture Diagram 
+		
+Next: 
+		
+Q/A ::::
+
+		
