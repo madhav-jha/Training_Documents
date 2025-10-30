@@ -759,4 +759,294 @@ Next:
 		
 Q/A ::::
 
+
+
+
+		
+		
+#######################
+Day 9 : 29th Oct. 2025
+#######################
+		
+	Project Discussion ::::
+	
+	
+	How to Implement DevOps Solutions ::::
+	
+
+- Prepare Jenkins CI-CD Pipeline Projects using Docker & Kubernetes ::
+	
+	
+	Pipeline Stages ::: 
+	
+	Create Jenkins CI Pipeline :	Using Docker & Kubernetes
+	
+	
+		1. SCM-Checkout
+		
+		2. Application Build 			*.war 
+		
+		3. Application Image Build 
+		
+		4. Login to DockerHub 
+		
+		5. Push to DockerHub 
+		
+		6. Deploy to Kubernetes
+			
+	
+	
+	DevOps Assessment :
+	
+		- Interact with all the teams and collect the detailed requirements 
+		
+		
+		
+	Phase 1 :
+		-> 	Infra-Structure Provisioning and Configurations 
+				- Using Terraform and Ansible 
+				- Using AWS Console 		
+			
+			If the Servers are already available just reuse. Else, create using AWS Console / Terraform & configure it using Ansible.
+	
+	
+	Phase 2 :
+		-> 	Automation of Application Builds & Deployments  
+				- Using Jenkins CICD Pipelines
+		
+		
+	Phase 3 :
+		-> 	Monitoring of Infra-Structure
+				- Using Prometheus & Grafana
+				
+				
+	What are the Servers(VM) needed ?
+	
+	What are the tools to be configured in each server ?
+	
+	What are the stages of CICD Pipeline ?
+	
+
+	- Implementation Procedures / Steps ::::
+	
+		1. List of Servers :: 
+		
+			Infra-Structure Management Team's Perspectives ::::
+			
+				- Create using AWS Console 
+				
+				- Create using Terraform / Ansible 
+				
+			
+			On DevOps Perspectives :	# Create CICD Pipeline ::::			
+
+				- Jenkins_Master 						VM1 				# https://www.jenkins.io/doc/book/installing/
+					- Jenkins_SlaveNode(Build_Server)	VM2 
+				
+				- Kubernetes_Master						VM3
+					- Kubernetes_WorkerNode1			VM4 
+					- Kubernetes_WorkerNode2			VM5 
+
+				
+			Production Support/Monitor Teams' Perspective ::::
+		
+				- Monitor the Kubernetes Cluster/Jenkins_Slave_Nodes using Prometheus & Grafana :				
+				
+					- Dedicated Monitoring Server! 		VM6						# Monitor Jenkins_Master & Jenkins_Slave_Nodes
+				
+					- Dedicated Monitoring Services(Prometheus & Grafana)		# To Monitor Kubernetes Cluster & Pods
+	
+	
+	
+			Servers & it's purpose :::
+			
+			
+				- Jenkins_Master 						VM1 	# To create CICD Pipeline Jobs and schedule it to run in Slave Nodes	
+				
+					- Jenkins_SlaveNode(Build_Server)	VM2 	# Checkout the Source_Code for GIT
+																# Compile the Source Code
+																# Create Artifacts
+																# Perform Unit Testing 
+																# Create Application Image
+																# Publish the Application Image to Container Registry
+																
+				
+				- Kubernetes_Master						VM3		# Schedule the Pods Deployment 
+																# Execute Kubernetes Monitoring Services using Prometheus & Grafana
+													
+					- Kubernetes_WorkerNode1			VM4 	# Execute the Pods
+					- Kubernetes_WorkerNode2			VM5 	# Execute the Pods
+
+				
+				
+				- Monitoring Server 					VM6		# To Monitor Jenkins_Master & Jenkins_Slave_Nodes
+																# Create Monitoring Dashboards
+				
+				
+		2. List of Tools :: 				
+				
+				- Jenkins_Master 						VM1 	# git,jdk,jenkins
+					- Jenkins_SlaveNode(Build_Server)	VM2 	# git,jdk,maven,docker
+					
+				- Kubernetes_Master						VM3		# All Kubernetes Components	
+					- Kubernetes_WorkerNode1			VM4 
+					- Kubernetes_WorkerNode2			VM5 
+
+
+			Manage the Credentials to access DockerHub,Jenkins_SlaveNodes,Kubernetes,Github(private repo)
+			
+					goto jenkins dashboard 
+						-- Manage Jenkins 
+							-- Credential 
+								-- using dockerhub username and access token
+								
+			
+			Integration of Kubernetes Master Node with Jenkins Master Node.
+			
+				- Using Publish over ssh plugins, integrate Kubernetes_Master Node to Jenkins Master Node
+				
+				- And Execute kubectl create command using Publish over ssh plugins
+				
+				--> 1. Create a devopsadmin - User in Kubernetes_Master
+				
+				--> 2. Create SSH Keys to devopsadmin - User
+				
+				--> 3. Ensure that devopsadmin - User have access to execute kubectl commands
+				
+				--> 4. Use, the Kubernetes - Master Node's - Private IP Address,User_Name and Credential to config in Jenkins - Publish Over SSH
+				
+				--> 5. Create a Pipeline Deployment Stage using Publish Over SSH Plugins step
+						- To copy the kubernetes manifest file - *.yaml file from jenkins_Slave Node to Kubernetes Master Node.
+						- To execute a command : kubectl apply -f kubernetesdeploy.yaml				
+			
+			
+		
+		
+		
+		3. CICD Pipeline Stages :::
+		
+			- SCM Checkout 
+			
+			- Application Build 
+			
+			- Application Image Build
+			
+			- Login to DockerHub 
+
+			- Publish Application Image to DockerHub Container Registry
+			
+			- Deploy the Application Images to Target Environments(QA/PROD) using Kubernetes			
+		
+		
+		
+
+
+
+#######################
+Day 9 : 29th Oct. 2025
+#######################
+
+
+	- Configured Jenkins Master Node 
+	
+	- Installed Publish over SSH Plugins 
+		
+
+	Project Demo:
+	
+		CICD Pipeline :::
+		
+		
+		Configure Jenkins Slave Node :
+		
+				- Jenkins_Master 						VM1 	# git,jdk,jenkins
+					- Jenkins_SlaveNode(Build_Server)	VM2 	# git,jdk,maven,docker		
+					
+					
+				- Create SSH Key in Slave Node to enable SSH Connection to Jenkins Master Node 
+				
+					- SSH COnnection :
+					
+						- Host Name   ==> Private_IP
+						
+						- User Name 
+						
+						- User Credentials (SSH-Key Pair)
+			
+
+		docker login -u lo,n
+		
+		kjk
+		
+		
+						
+pipeline {
+    agent { label 'slave1' }
+
+	environment {	
+		DOCKERHUB_CREDENTIALS=credentials('dockerloginid1')
+	}
+
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'Perform SCM Checkout'
+				git 'https://github.com/PL-DevOps-GenAI-0625/BankingWebApp.git'			
+            }
+        }
+        stage('Application Build') {
+            steps {
+                echo 'Perform Application Build'
+				sh 'mvn clean package'
+            }
+        }
+        stage('Application Image Build') {
+            steps {
+                echo 'Perform Application Image Build'
+				sh "docker build -t loksaieta/bankingwebapp:${BUILD_NUMBER} ."
+				sh "docker tag loksaieta/bankingwebapp:${BUILD_NUMBER} loksaieta/bankingwebapp:latest"
+            }
+        }
+        stage('Login to DockerHub') {
+            steps {
+                echo 'Login to DockerHub'
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'				
+            }
+        }
+        stage('Push to DockerHub') {
+            steps {
+                echo 'Push Image to DockerHub'
+				sh "docker push loksaieta/bankingwebapp:${BUILD_NUMBER}"
+				sh "docker push loksaieta/bankingwebapp:latest"
+				sh "docker rmi loksaieta/bankingwebapp:${BUILD_NUMBER}"
+				sh "docker rmi loksaieta/bankingwebapp:latest"
+            }
+        }
+        stage('Deploy to Kubernetes') {
+            steps {
+                script
+				{
+				sshPublisher(publishers: [sshPublisherDesc(configName: 'KMaster', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'kubectl apply -f bankingdeploy.yaml', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '*.yaml')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}				
+            }
+        }
+    }
+}						
+		
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
